@@ -1,0 +1,141 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.application{
+  display: flex;
+}
+
+.frontnback{
+  width: 30%;
+  background-image: url('/images/bg-main-desktop.png');
+  height: 100vh;
+  position: absolute;
+}
+
+.front{
+  width: 100%;
+  height: auto;
+  background-image: url('./images/bg-card-front.png');
+  border-radius: 10px;
+  position: relative;
+  top: 10%;
+  left: 30%;
+  padding: 5% 0 1% 5%;
+  color: white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bcardnum{
+  position: relative;
+  top: 20px;
+}
+
+.cardnum{
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.namenmonth{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5% 0 0;
+  letter-spacing: 2px;
+}
+.namenmonth h3{
+  font-weight: 400;
+}
+
+.back{
+  width: 110%;
+  height: 200px;
+  background-image: url('./images/bg-card-back.png');
+  border-radius: 10px;
+  position: relative;
+  top: 15%;
+  left: 45%;
+  color: white;
+}
+.back h3{
+  position: absolute;
+  bottom: 50px;
+  right: 60px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.cardcomponent{
+  /* border: 6px solid green; */
+  height: 100vh;
+  width: 70%;
+  margin-left: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.myform{
+  /* border: 1px solid green; */
+  width: 40%;
+  margin-left: 10%;
+  height: auto;
+}
+.myform label{
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.myform input{
+  width: 100%;
+  font-size: 20px;
+  border: 1px solid rgb(204, 200, 200);
+  border-radius: 5px;
+  height: 35px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.expdatencvc{
+  display: flex;
+}
+
+.expdate{
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid green; */
+  padding-right: 5%;
+  width: 80%;
+}
+
+.expdate input{
+  width: 45%;
+}
+
+.cvc{
+  width: 100%;
+  /* border: 1px solid green; */
+}
+
+.cvc input{
+  /* border: 1px solid brown; */
+}
+
+button{
+  width: 100%;
+  margin-top: 20px;
+  color: white;
+  background-color: rgb(39, 4, 48);
+  padding: 3%;
+  letter-spacing: 1px;
+  font-size: 24px;
+  border: none;
+  border-radius: 7px;
+}

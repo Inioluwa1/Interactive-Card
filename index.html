@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Interactive Card </title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js" > </script>
+</head>
+<body>
+  <div class="application"> 
+    <div class="frontnback">
+      <div class="front">
+        <img src="./images/card-logo.svg" />
+        <div class="bcardnum">
+          <h1 class="cardnum"> 0000 0000 0000 0000 </h1>
+        </div>
+        <div class="namenmonth">
+          <h3> ADESANYA AYOMIDE </h3>
+          <h3> 00/00</h3>
+        </div>
+      </div>
+      <div class="back">
+        <h3> 000 </h3>
+      </div>
+    </div>
+    
+    <div class="cardcomponent">
+      <form class="myform">
+        <label for="cardname" > Cardholder Name </label> <br>
+        <input type="text" id="cardname" placeholder="e.g. Adesanya Ayomide" /> <br>
+        <label for="cardnum"> Card number </label> <br>
+        <input type="text" id="cardnum"  placeholder="e.g. 1234 5678 9123 0000" /> <br> 
+        <div class="expdatencvc">
+          <div>
+            <label for="expdate"> Exp. Date (mm/yy) </label><br> 
+            <div class="expdate">
+              <input type="text" id="expdate"  placeholder="MM" />
+              <input type="text" id="expdate"  placeholder="YY"/>
+            </div>
+          </div>
+          <div class="cvc">
+            <label for="cvc" > cvc </label> <br>
+            <input type="text" id="cvc"  placeholder="e.g. 123" /> <br>
+          </div>
+        </div>
+        <button> Confirm </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
