@@ -10,43 +10,55 @@
 <body>
   <div class="application"> 
     <div class="frontnback">
-      <div class="front">
+      <div class="front"> 
         <img src="./images/card-logo.svg" />
         <div class="bcardnum">
-          <h1 class="cardnum"> 0000 0000 0000 0000 </h1>
+          <h1 class="cardnum" id="cardnumvalue"> 0000 0000 0000 0000 </h1>
         </div>
         <div class="namenmonth">
-          <h3> ADESANYA AYOMIDE </h3>
-          <h3> 00/00</h3>
+          <h3 id="cardnamevalue"> ADESANYA AYOMIDE </h3>
+          <h3 id="yearmonval"> 00/00</h3>
         </div>
       </div>
       <div class="back">
-        <h3> 000 </h3>
+        <h3 id="cvcnum"> 000 </h3>
       </div>
     </div>
     
-    <div class="cardcomponent">
+    <div class="cardcomponent" id="cardcomponent">
       <form class="myform">
         <label for="cardname" > Cardholder Name </label> <br>
-        <input type="text" id="cardname" placeholder="e.g. Adesanya Ayomide" /> <br>
+        <input type="text" id="cardname" placeholder="Adesanya Ayomide"  /> <br>
+        <p id="error1" class="error1">   </p>
         <label for="cardnum"> Card number </label> <br>
-        <input type="text" id="cardnum"  placeholder="e.g. 1234 5678 9123 0000" /> <br> 
+        <input type="text" id="cardnum"  placeholder="1234 5678 9123 0000" maxlength="16" inputmode="numeric" /> <br> 
+        <p id="error2" class="error2"> </p>
         <div class="expdatencvc">
           <div>
             <label for="expdate"> Exp. Date (mm/yy) </label><br> 
             <div class="expdate">
-              <input type="text" id="expdate"  placeholder="MM" />
-              <input type="text" id="expdate"  placeholder="YY"/>
+              <input type="text" id="expdate1"  placeholder="MM" maxlength="2" inputmode="numeric"/>
+              <input type="text" id="expdate2"  placeholder="YY"  maxlength="2" inputmode="numeric"/>
             </div>
+            <p id="error3" class="error3">  </p>
           </div>
           <div class="cvc">
             <label for="cvc" > cvc </label> <br>
-            <input type="text" id="cvc"  placeholder="e.g. 123" /> <br>
+            <input type="text" id="cvc" placeholder="123" maxlength="3" inputmode="numeric" /> <br>
+            <p id="error4" class="error4">  </p>
           </div>
         </div>
-        <button> Confirm </button>
       </form>
+      <button class="button1" onclick={handleSubmit()}> Confirm </button>
     </div>
+    
+    <div class="aftersubmission" id="aftersubmission">
+      <img src="./images/icon-complete.svg" />
+      <h1> THANK YOU! </h1>
+      <p> We've added your card details </p>
+      <button class="button2" id="button2" onclick={clearForm()}> Continue </button>
+    </div>
+
   </div>
 </body>
 </html>

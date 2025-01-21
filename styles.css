@@ -9,6 +9,9 @@ body {
 
 .application{
   display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  /* border: 5px solid green; */
 }
 
 .frontnback{
@@ -16,12 +19,15 @@ body {
   background-image: url('/images/bg-main-desktop.png');
   height: 100vh;
   position: absolute;
+  /* border: 2px solid brown; */
 }
 
 .front{
   width: 100%;
   height: auto;
   background-image: url('./images/bg-card-front.png');
+  background-repeat: none;
+  background-size: cover;
   border-radius: 10px;
   position: relative;
   top: 10%;
@@ -29,6 +35,7 @@ body {
   padding: 5% 0 1% 5%;
   color: white;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
 }
 
 .bcardnum{
@@ -52,9 +59,11 @@ body {
 }
 
 .back{
-  width: 110%;
+  width: 100%;
   height: 200px;
   background-image: url('./images/bg-card-back.png');
+  background-repeat: none;
+  background-size: cover;
   border-radius: 10px;
   position: relative;
   top: 15%;
@@ -63,8 +72,8 @@ body {
 }
 .back h3{
   position: absolute;
-  bottom: 50px;
-  right: 60px;
+  bottom: 60px;
+  right: 50px;
   font-weight: 400;
   letter-spacing: 2px;
 }
@@ -74,18 +83,21 @@ body {
   height: 100vh;
   width: 70%;
   margin-left: 30%;
+  /* margin-top: 10px; */
+  padding-top: 5px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* display: none; */
 }
 
 .myform{
   /* border: 1px solid green; */
   width: 40%;
-  margin-left: 10%;
   height: auto;
 }
 .myform label{
@@ -98,7 +110,7 @@ body {
   border: 1px solid rgb(204, 200, 200);
   border-radius: 5px;
   height: 35px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   margin-top: 5px;
   padding: 10px;
 }
@@ -128,14 +140,233 @@ body {
   /* border: 1px solid brown; */
 }
 
-button{
-  width: 100%;
+.button1{
+  width: 40%;
   margin-top: 20px;
   color: white;
   background-color: rgb(39, 4, 48);
-  padding: 3%;
+  padding: 1%;
   letter-spacing: 1px;
   font-size: 24px;
   border: none;
   border-radius: 7px;
+  height: auto;
+}
+.button1:hover{
+  background-color: rgba(39, 4, 48,0.5);
+}
+
+.aftersubmission{
+    /* border: 6px solid green; */
+    height: 100vh;
+    width: 70%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: none;
+}
+.aftersubmission h1{
+  letter-spacing: 2px;
+}
+.aftersubmission p{
+  color: grey;
+  margin-top: 0;
+}
+
+.button2{
+  width: 30%;
+  margin-top: 20px;
+  color: white;
+  background-color: rgb(39, 4, 48);
+  padding: 1%;
+  letter-spacing: 1px;
+  font-size: 24px;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+}
+.button2:hover{
+  background-color: rgba(39, 4, 48,0.5);
+}
+
+.error1, .error2, .error3, .error4{
+  color: red;
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .application{
+    display: flex;
+    flex-direction: column;
+  }
+  .frontnback{
+    width: 100%;
+    background-image: url('/images/bg-main-mobile.png');
+    background-repeat: none;
+    background-size: cover;
+    height: 30vh;
+    position: absolute;
+    /* border: 2px solid brown; */
+  }
+  .front{
+    width: 80%;
+    height: 70%;
+    background-image: url('./images/bg-card-front.png');
+    background-repeat: none;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    top: 58%;
+    left: 3%;
+    padding: 5% 0 2% 5%;
+    color: white;
+    z-index: 2;
+  }
+  .bcardnum{
+    position: static;
+  }
+  .cardnum{
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10%;
+  }
+  .namenmonth{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 0 0;
+    letter-spacing: 2px;
+    position: relative;
+    top: -20%;
+  }
+  .back{
+    width: 80%;
+    height: 60%;
+    background-image: url('./images/bg-card-back.png');
+    background-repeat: none;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    left: 15%;
+    top: -55%;
+    color: white;
+  }
+  .back h3{
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  .cardcomponent{
+    /* border: 5px solid green; */
+    height: 95vh;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10%;
+    /* padding-top: 5%; */
+    /* padding-bottom: 5%; */
+    text-transform: uppercase;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 4%;
+    /* display: none; */
+  }
+  .myform{
+    margin-top: 60%;
+    /* border: 1px solid green; */
+    width: 100%;
+    height: auto;
+  }
+  .myform label{
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .myform input{
+    width: 100%;
+    font-size: 23px;
+    border: 1px solid rgb(204, 200, 200);
+    border-radius: 5px;
+    height: 60px;
+    margin-bottom: 6%;
+    margin-top: 3%;
+    padding: 10px;
+  }
+  
+  .expdatencvc{
+    display: flex;
+  }
+  
+  .expdate{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+    padding-right: 5%;
+    width: 100%;
+  }
+  
+  .expdate input{
+    width: 45%;
+  }
+  
+  .cvc input{
+    width: 100%;
+    /* border: 1px solid green; */
+  }
+  
+  .button1{
+    width: 100%;
+    margin-top: 10px;
+    color: white;
+    background-color: rgb(39, 4, 48);
+    padding: 3%;
+    letter-spacing: 1px;
+    font-size: 24px;
+    border: none;
+    border-radius: 7px;
+  }
+  .button1:hover{
+    background-color: rgba(39, 4, 48,0.5);
+  }
+  .aftersubmission{
+    margin-left: 0;
+    margin-top: 40%;
+    /* border: 5px solid green; */
+    width: 100%;
+    height: 80vh;
+  }
+  .button2{
+    width: 80%;
+    margin-top: 10px;
+    color: white;
+    background-color: rgb(39, 4, 48);
+    padding: 2%;
+    letter-spacing: 1px;
+    font-size: 24px;
+    border: none;
+    border-radius: 7px;
+  }
+  .button1:hover{
+    background-color: rgba(39, 4, 48,0.5);
+  }
+  
+  
+}
+
+@media screen and (max-width:400px) {
+  .cardnum{
+    font-size: 23px;
+    margin-bottom: 8%;
+  }
+
+  .namenmonth{
+    font-size: 13px;
+  }
 }
