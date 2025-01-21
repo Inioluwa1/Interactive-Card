@@ -202,7 +202,7 @@ body {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
   .application{
     display: flex;
     flex-direction: column;
@@ -224,7 +224,7 @@ body {
     background-size: cover;
     border-radius: 10px;
     position: relative;
-    top: 58%;
+    top: 50%;
     left: 3%;
     padding: 5% 0 2% 5%;
     color: white;
@@ -256,13 +256,13 @@ body {
     border-radius: 10px;
     position: relative;
     left: 15%;
-    top: -55%;
+    top: -60%;
     color: white;
   }
   .back h3{
     position: absolute;
-    bottom: 30px;
-    right: 40px;
+    bottom: 24% ;
+    right: 9.5%;
     font-weight: 400;
     letter-spacing: 2px;
   }
